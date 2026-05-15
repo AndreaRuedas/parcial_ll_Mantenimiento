@@ -1,704 +1,338 @@
+# Página HTML5 - Turismo en Ocaña, Norte de Santander
+
+Guarda este archivo como `index.html`.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ocaña Turística – Descubre el Norte de Santander</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <style>
-    /* ===== VARIABLES ===== */
-    :root {
-      --verde:    #2d6a4f;
-      --verde-claro: #52b788;
-      --crema:    #fefae0;
-      --tierra:   #b5838d;
-      --oscuro:   #1b2223;
-      --gris:     #6c757d;
-      --blanco:   #ffffff;
-      --sombra:   0 4px 24px rgba(0,0,0,0.12);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo en Ocaña - Norte de Santander</title>
 
-    /* ===== RESET ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Lato', sans-serif;
-      background: var(--crema);
-      color: var(--oscuro);
-      line-height: 1.7;
-    }
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-    /* ===== HEADER ===== */
-    header {
-      background: linear-gradient(135deg, var(--verde) 0%, #1b4332 100%);
-      color: var(--blanco);
-      text-align: center;
-      padding: 70px 20px 50px;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80') center/cover no-repeat;
-      opacity: 0.18;
-    }
-    header .badge {
-      display: inline-block;
-      background: var(--verde-claro);
-      color: var(--oscuro);
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-bottom: 18px;
-      position: relative;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      line-height: 1.1;
-      position: relative;
-    }
-    header p.subtitulo {
-      margin-top: 14px;
-      font-size: 1.1rem;
-      font-weight: 300;
-      opacity: .9;
-      position: relative;
-      max-width: 600px;
-      margin-inline: auto;
-    }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f5f5f5;
+            color:#333;
+            line-height:1.6;
+        }
 
-    /* ===== NAV ===== */
-    nav {
-      background: var(--oscuro);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: var(--sombra);
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      list-style: none;
-      gap: 0;
-    }
-    nav ul li a {
-      display: block;
-      padding: 16px 22px;
-      color: var(--blanco);
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: background .2s, color .2s;
-    }
-    nav ul li a:hover {
-      background: var(--verde);
-      color: var(--crema);
-    }
+        header{
+            background:#0b5394;
+            color:white;
+            text-align:center;
+            padding:40px;
+        }
 
-    /* ===== MAIN ===== */
-    main { max-width: 1100px; margin: 0 auto; padding: 40px 20px 60px; }
+        nav{
+            background:#073763;
+            padding:15px;
+            text-align:center;
+            position:sticky;
+            top:0;
+        }
 
-    /* ===== SECTION TITLES ===== */
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--verde);
-      border-left: 5px solid var(--verde-claro);
-      padding-left: 14px;
-      margin-bottom: 28px;
-    }
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
 
-    /* ===== SECTION INICIO ===== */
-    #inicio {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-      align-items: center;
-      margin-bottom: 70px;
-    }
-    #inicio .texto h2 { font-family:'Playfair Display',serif; font-size:2.2rem; color:var(--verde); margin-bottom:14px; }
-    #inicio .texto p { color: #444; margin-bottom: 12px; }
-    #inicio .texto a.btn-externo {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 11px 26px;
-      background: var(--verde);
-      color: var(--blanco);
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: background .2s;
-    }
-    #inicio .texto a.btn-externo:hover { background: var(--verde-claro); color: var(--oscuro); }
-    #inicio img.foto-principal {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: var(--sombra);
-    }
+        nav a:hover{
+            color:#ffd966;
+        }
 
-    /* ===== ASIDE (ubicación) ===== */
-    aside {
-      background: var(--verde);
-      color: var(--blanco);
-      border-radius: 12px;
-      padding: 24px 28px;
-      margin-bottom: 70px;
-    }
-    aside h3 { font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:12px; }
-    aside ul { list-style: none; }
-    aside ul li { padding: 4px 0; font-size:.95rem; }
-    aside ul li span { font-weight:700; }
+        main{
+            width:90%;
+            margin:auto;
+            padding:20px;
+        }
 
-    /* ===== SECTION ATRACCIONES ===== */
-    #atracciones { margin-bottom: 70px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    article.card {
-      background: var(--blanco);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--sombra);
-      transition: transform .25s;
-    }
-    article.card:hover { transform: translateY(-6px); }
-    article.card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    article.card .card-body { padding: 18px 20px; }
-    article.card .card-body h3 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--verde); margin-bottom:8px; }
-    article.card .card-body p { font-size:.9rem; color:#555; }
+        section{
+            background:white;
+            margin:20px 0;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
 
-    /* ===== SECTION ACTIVIDADES (tabla) ===== */
-    #actividades { margin-bottom: 70px; }
-    .tabla-wrapper { overflow-x: auto; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--blanco);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--sombra);
-    }
-    thead { background: var(--verde); color: var(--blanco); }
-    thead th { padding: 14px 18px; text-align: left; font-size:.9rem; letter-spacing:.5px; text-transform:uppercase; }
-    tbody tr:nth-child(even) { background: #f0f4f1; }
-    tbody td { padding: 13px 18px; font-size:.95rem; border-bottom: 1px solid #e0e0e0; }
-    tbody tr:last-child td { border-bottom: none; }
+        h2{
+            color:#0b5394;
+            margin-bottom:15px;
+        }
 
-    /* ===== SECTION MULTIMEDIA ===== */
-    #multimedia { margin-bottom: 70px; }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--sombra);
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
+        .imagenes{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
 
-    /* ===== SECTION GALERÍA ===== */
-    #galeria { margin-bottom: 70px; }
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .galeria-grid img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: var(--sombra);
-      transition: transform .25s;
-    }
-    .galeria-grid img:hover { transform: scale(1.03); }
+        .imagenes img{
+            width:300px;
+            height:200px;
+            object-fit:cover;
+            border-radius:10px;
+            box-shadow:0 0 8px rgba(0,0,0,0.2);
+        }
 
-    /* ===== SECTION FORMULARIO ===== */
-    #formulario { margin-bottom: 40px; }
-    form {
-      background: var(--blanco);
-      border-radius: 16px;
-      padding: 36px 40px;
-      box-shadow: var(--sombra);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px 28px;
-    }
-    .campo-completo { grid-column: 1 / -1; }
-    label {
-      display: block;
-      font-size: .85rem;
-      font-weight: 700;
-      color: var(--verde);
-      margin-bottom: 6px;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 11px 14px;
-      border: 2px solid #d0d8d2;
-      border-radius: 8px;
-      font-family: 'Lato', sans-serif;
-      font-size: .95rem;
-      transition: border-color .2s;
-      background: #fafafa;
-    }
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--verde-claro);
-      background: var(--blanco);
-    }
-    input:invalid:not(:placeholder-shown) { border-color: #e63946; }
-    textarea { resize: vertical; min-height: 120px; }
-    .btn-enviar {
-      grid-column: 1 / -1;
-      padding: 14px;
-      background: var(--verde);
-      color: var(--blanco);
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background .2s;
-    }
-    .btn-enviar:hover { background: var(--verde-claro); color: var(--oscuro); }
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--oscuro);
-      color: #aaa;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: .88rem;
-    }
-    footer a { color: var(--verde-claro); text-decoration: none; }
+        table, th, td{
+            border:1px solid #ccc;
+        }
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      #inicio { grid-template-columns: 1fr; }
-      form { grid-template-columns: 1fr; }
-      .galeria-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 500px) {
-      .galeria-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+        th{
+            background:#0b5394;
+            color:white;
+        }
+
+        th, td{
+            padding:12px;
+            text-align:center;
+        }
+
+        iframe{
+            width:100%;
+            height:400px;
+            border:none;
+            border-radius:10px;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+        }
+
+        form label{
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        form input,
+        form textarea,
+        form select{
+            padding:10px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            margin-top:5px;
+        }
+
+        form button{
+            margin-top:20px;
+            padding:12px;
+            background:#0b5394;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        form button:hover{
+            background:#073763;
+        }
+
+        aside{
+            background:#d9ead3;
+            padding:20px;
+            border-radius:10px;
+            margin-top:20px;
+        }
+
+        footer{
+            background:#073763;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+    </style>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
 <header>
-  <span class="badge">🇨🇴 Norte de Santander, Colombia</span>
-  <h1>Ocaña Turística</h1>
-  <p class="subtitulo">Descubre la joya colonial del norte colombiano: historia, naturaleza y cultura en un solo destino.</p>
+    <h1>Turismo en Ocaña, Norte de Santander</h1>
+    <p>Descubre la belleza histórica, cultural y natural de Ocaña</p>
 </header>
 
-<!-- ===== NAV ===== -->
 <nav>
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#atracciones">Atracciones</a></li>
-    <li><a href="#actividades">Actividades</a></li>
-    <li><a href="#multimedia">Video</a></li>
-    <li><a href="#galeria">Galería</a></li>
-    <li><a href="#formulario">Contacto</a></li>
-  </ul>
+    <a href="#inicio">Inicio</a>
+    <a href="#lugares">Lugares Turísticos</a>
+    <a href="#tabla">Actividades</a>
+    <a href="#video">Video</a>
+    <a href="#formulario">Formulario</a>
 </nav>
 
-<!-- ===== MAIN ===== -->
 <main>
 
-  <!-- SECCIÓN INICIO -->
-  <section id="inicio">
-    <div class="texto">
-      <h2>Bienvenido a Ocaña</h2>
-      <p>
-        Ocaña es un municipio del departamento de Norte de Santander, Colombia, conocido como
-        <strong>"La Perla del Norte"</strong>. Con una altitud de 1.202 m s. n. m., ofrece un clima
-        agradable y un rico patrimonio histórico que data de la época colonial.
-      </p>
-      <p>
-        Su centro histórico, museos, iglesias centenarias y la impresionante naturaleza circundante
-        la convierten en un destino ideal para el turismo cultural, ecológico y gastronómico.
-      </p>
-      <p>
-        <strong>Ubicación:</strong> Norte de Santander, Colombia &nbsp;|&nbsp;
-        <strong>Altitud:</strong> 1.202 m s. n. m. &nbsp;|&nbsp;
-        <strong>Clima:</strong> 19 °C promedio
-      </p>
-      <!-- ENLACE EXTERNO OBLIGATORIO -->
-      <a class="btn-externo"
-         href="https://www.youtube.com/watch?v=Nl32PZM_dIo"
-         target="_blank"
-         rel="noopener noreferrer">
-        ▶ Ver video en YouTube
-      </a>
-    </div>
-    <img
-      class="foto-principal"
-      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
-      alt="Paisaje montañoso representativo de Ocaña, Norte de Santander, Colombia"
-    />
-  </section>
+    <section id="inicio">
+        <article>
+            <h2>Sobre Ocaña</h2>
+            <p>
+                Ocaña es uno de los municipios más importantes de Norte de Santander.
+                Se caracteriza por su riqueza histórica, cultural y turística.
+                Sus paisajes naturales, iglesias, parques y sitios históricos atraen
+                visitantes de diferentes lugares de Colombia.
+            </p>
+        </article>
 
-  <!-- ASIDE UBICACIÓN -->
-  <aside>
-    <h3>📍 Información General</h3>
-    <ul>
-      <li><span>País:</span> Colombia</li>
-      <li><span>Departamento:</span> Norte de Santander</li>
-      <li><span>Municipio:</span> Ocaña</li>
-      <li><span>Fundación:</span> 14 de diciembre de 1570</li>
-      <li><span>Horario de atención turística:</span> Lunes a Domingo, 8:00 am – 6:00 pm</li>
-      <li><span>Temperatura promedio:</span> 19 °C</li>
-      <li><span>Altitud:</span> 1.202 m s. n. m.</li>
-    </ul>
-  </aside>
+        <aside>
+            <h3>Dato curioso</h3>
+            <p>
+                Ocaña fue sede de la Gran Convención de 1828, uno de los eventos
+                históricos más importantes de Colombia.
+            </p>
+        </aside>
+    </section>
 
-  <!-- SECCIÓN ATRACCIONES -->
-  <section id="atracciones">
-    <h2 class="section-title">Atracciones Principales</h2>
-    <div class="cards">
+    <section id="lugares">
+        <h2>Lugares Turísticos</h2>
 
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80"
-          alt="Formaciones rocosas del Área Natural Única Los Estoraques, Norte de Santander, Colombia"
-        />
-        <div class="card-body">
-          <h3>
-            <a href="https://www.tripadvisor.co/Attraction_Review-g2440194-d12851558-Reviews-Area_Natural_Unica_Los_Estoraques-Ocana_Norte_de_Santander_Department.html"
-               target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">
-              🏔️ Área Natural Única Los Estoraques
-            </a>
-          </h3>
-          <p>
-            A solo 27 km de Ocaña, Los Estoraques es una de las áreas protegidas más singulares de Colombia.
-            Sus columnas, cuevas y pedestales de piedra rojiza —esculpidos por el viento y el agua durante millones de años—
-            crean un paisaje comparable a la Capadocia turca. Declarada Área Natural Única en 1988, alberga más de
-            300 especies de mariposas y una flora semidesértica irrepetible.
-          </p>
-          <p style="margin-top:8px;font-size:.85rem;color:#2d6a4f;font-weight:700;">
-            📍 La Playa de Belén · Entrada: desde $8.000 COP
-          </p>
+        <div class="imagenes">
+            <img src="imagenes/ocana1.jpg" alt="Centro histórico de Ocaña">
+            <img src="imagenes/ocana2.jpg" alt="Complejo histórico de Ocaña">
+            <img src="imagenes/ocana3.jpg" alt="Paisaje turístico de Ocaña">
         </div>
-      </article>
 
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80"
-          alt="Parque principal colonial de Ocaña con vegetación y arquitectura histórica"
-        />
-        <div class="card-body">
-          <h3>
-            <a href="https://www.tripadvisor.co/Attraction_Review-g2440194-d5541765-Reviews-Main_Square-Ocana_Norte_de_Santander_Department.html"
-               target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">
-              🌳 Parque Principal (Plaza 29 de Mayo)
+        <br>
+
+        <ul>
+            <li>Complejo Histórico de la Gran Convención</li>
+            <li>Cerro de los Cristales</li>
+            <li>Parque Principal 29 de Mayo</li>
+            <li>Los Estoraques</li>
+            <li>Miradores turísticos</li>
+        </ul>
+    </section>
+
+    <section id="tabla">
+        <h2>Actividades Turísticas</h2>
+
+        <table>
+            <tr>
+                <th>Actividad</th>
+                <th>Duración</th>
+                <th>Costo estimado</th>
+                <th>Recomendación</th>
+            </tr>
+
+            <tr>
+                <td>Recorrido Histórico</td>
+                <td>2 horas</td>
+                <td>$10.000</td>
+                <td>Llevar cámara</td>
+            </tr>
+
+            <tr>
+                <td>Visita a Los Estoraques</td>
+                <td>4 horas</td>
+                <td>$25.000</td>
+                <td>Usar ropa cómoda</td>
+            </tr>
+
+            <tr>
+                <td>Tour gastronómico</td>
+                <td>1 hora</td>
+                <td>$15.000</td>
+                <td>Probar la arepa ocañera</td>
+            </tr>
+
+            <tr>
+                <td>Caminata ecológica</td>
+                <td>3 horas</td>
+                <td>$20.000</td>
+                <td>Llevar agua</td>
+            </tr>
+
+            <tr>
+                <td>Visita cultural</td>
+                <td>2 horas</td>
+                <td>$12.000</td>
+                <td>Ir en grupo</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="video">
+        <h2>Video Turístico</h2>
+
+        <iframe src="https://www.youtube.com/embed/Nl32PZM_dIo"
+        title="Turismo en Ocaña"
+        allowfullscreen></iframe>
+
+        <p>
+            También puedes visitar
+            <a href="https://www.youtube.com/watch?v=Nl32PZM_dIo" target="_blank">
+                este enlace de YouTube
             </a>
-          </h3>
-          <p>
-            Corazón histórico de Ocaña, este parque data de la fundación de la ciudad en 1570.
-            En su centro se erige la imponente <strong>Columna de la Libertad de los Esclavos</strong>,
-            único monumento en Colombia que conmemora la abolición de la esclavitud, declarado Bien de
-            Interés Cultural de carácter nacional. Rodeado de edificios coloniales y la Catedral de Santa Ana,
-            es el punto de encuentro de propios y visitantes.
-          </p>
-          <p style="margin-top:8px;font-size:.85rem;color:#2d6a4f;font-weight:700;">
-            📍 Centro histórico de Ocaña · Entrada libre
-          </p>
-        </div>
-      </article>
+        </p>
+    </section>
 
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80"
-          alt="Catedral de Santa Ana de Ocaña, edificio neoclásico de estilo colonial"
-        />
-        <div class="card-body">
-          <h3>
-            <a href="https://www.tripadvisor.co/Attraction_Review-g2440194-d7967116-Reviews-Catedral_de_Santa_Ana-Ocana_Norte_de_Santander_Department.html"
-               target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">
-              ⛪ Catedral de Santa Ana
-            </a>
-          </h3>
-          <p>
-            Construida en 1576, esta catedral de estilo neoclásico es el principal referente religioso y artístico de Ocaña.
-            Ubicada frente a la Plaza 29 de Mayo, su nave central alberga el magnífico
-            <strong>Retablo Mayor del siglo XVIII</strong>, tallado en madera junto al altar, la sede y el ambón.
-            Sede de la Diócesis de Ocaña y declarada Bien de Interés Cultural de carácter departamental.
-          </p>
-          <p style="margin-top:8px;font-size:.85rem;color:#2d6a4f;font-weight:700;">
-            📍 Plaza 29 de Mayo · Horario: 7:00 am – 6:00 pm
-          </p>
-        </div>
-      </article>
+    <section id="formulario">
+        <h2>Formulario de Visita</h2>
 
-      <article class="card">
-        <img
-          src="https://images.unsplash.com/photo-1565117131175-b8aa72a4277f?w=600&q=80"
-          alt="Complejo histórico colonial de arquitectura republicana en Colombia"
-        />
-        <div class="card-body">
-          <h3>
-            <a href="https://www.tripadvisor.co/Attraction_Review-g2440194-d8692808-Reviews-Complejo_Historico_de_la_Gran_Convencion-Ocana_Norte_de_Santander_Department.html"
-               target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">
-              🏛️ Complejo Histórico de la Gran Convención
-            </a>
-          </h3>
-          <p>
-            Entre el 9 de abril y el 11 de junio de 1828 se celebró aquí la <strong>Gran Convención de Ocaña</strong>,
-            que buscó reformar la Constitución de Cúcuta de 1821. El complejo colonial —declarado Bien de Interés
-            Cultural de carácter nacional— integra el Templo de San Francisco, la Academia de Historia,
-            el Museo de la Gran Convención (con 7 salas de exposición) y la Biblioteca Pública Municipal.
-          </p>
-          <p style="margin-top:8px;font-size:.85rem;color:#2d6a4f;font-weight:700;">
-            📍 Barrio San Francisco · Entrada libre al complejo
-          </p>
-        </div>
-      </article>
+        <form>
 
-    </div>
-  </section>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required minlength="3" maxlength="30">
 
-  <!-- SECCIÓN ACTIVIDADES – TABLA -->
-  <section id="actividades">
-    <h2 class="section-title">Actividades Turísticas</h2>
-    <div class="tabla-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Actividad</th>
-            <th>Duración</th>
-            <th>Costo estimado</th>
-            <th>Recomendación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Recorrido histórico por el centro</td>
-            <td>3 horas</td>
-            <td>Gratuito</td>
-            <td>Llevar cámara fotográfica y calzado cómodo</td>
-          </tr>
-          <tr>
-            <td>Senderismo en Reserva El Hatico</td>
-            <td>4 – 5 horas</td>
-            <td>$20.000 COP</td>
-            <td>Asistir con guía local y llevar agua</td>
-          </tr>
-          <tr>
-            <td>Visita a la Cascada Los Ingleses</td>
-            <td>Todo el día</td>
-            <td>$15.000 COP</td>
-            <td>Ropa impermeable y snacks energéticos</td>
-          </tr>
-          <tr>
-            <td>Tour gastronómico local</td>
-            <td>2 horas</td>
-            <td>$35.000 COP</td>
-            <td>Probar el mute y la pepitoria ocañera</td>
-          </tr>
-          <tr>
-            <td>Visita al Museo Antonia Santos</td>
-            <td>1.5 horas</td>
-            <td>$5.000 COP</td>
-            <td>Ideal para grupos escolares y familias</td>
-          </tr>
-          <tr>
-            <td>Ruta del café y cacao</td>
-            <td>Todo el día</td>
-            <td>$50.000 COP</td>
-            <td>Reservar con 2 días de anticipación</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" required>
 
-  <!-- SECCIÓN MULTIMEDIA -->
-  <section id="multimedia">
-    <h2 class="section-title">Video: Conoce Ocaña</h2>
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/watch?v=Nl32PZM_dIo"
-        title="Video turístico de Ocaña, Norte de Santander, Colombia"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+            <label for="ciudad">Ciudad de origen</label>
+            <input type="text" id="ciudad" required minlength="3">
 
-  <!-- SECCIÓN GALERÍA -->
-  <section id="galeria">
-    <h2 class="section-title">Galería de Imágenes</h2>
-    <div class="galeria-grid">
-      <img
-        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
-        alt="Vista panorámica de las montañas que rodean el municipio de Ocaña"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&q=80"
-        alt="Paisaje natural con vegetación exuberante y cielo azul en Norte de Santander"
-      />
-      <img
-        src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80"
-        alt="Naturaleza colombiana: bosques y selva tropical de la región andina"
-      />
-    </div>
-  </section>
+            <label for="fecha">Fecha de visita</label>
+            <input type="date" id="fecha" required>
 
-  <!-- SECCIÓN FORMULARIO -->
-  <section id="formulario">
-    <h2 class="section-title">Planifica tu Visita</h2>
-    <form action="#" method="post" onsubmit="handleSubmit(event)">
+            <label for="personas">Número de personas</label>
+            <input type="number" id="personas" min="1" max="20" required>
 
-      <!-- Campo 1: Nombre -->
-      <div>
-        <label for="nombre">Nombre completo</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          placeholder="Ej: Andrés García"
-          required
-          minlength="3"
-          maxlength="80"
-        />
-      </div>
+            <label for="tema">Tema de interés</label>
+            <select id="tema" required>
+                <option value="">Seleccione</option>
+                <option>Turismo</option>
+                <option>Cultura local</option>
+                <option>Naturaleza</option>
+                <option>Rutas ecológicas</option>
+                <option>Historia</option>
+                <option>Viajes</option>
+            </select>
 
-      <!-- Campo 2: Correo -->
-      <div>
-        <label for="correo">Correo electrónico</label>
-        <input
-          type="email"
-          id="correo"
-          name="correo"
-          placeholder="correo@ejemplo.com"
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        />
-      </div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="5" required minlength="10"></textarea>
 
-      <!-- Campo 3: Ciudad de origen -->
-      <div>
-        <label for="ciudad">Ciudad de origen</label>
-        <input
-          type="text"
-          id="ciudad"
-          name="ciudad"
-          placeholder="Ej: Bogotá"
-          required
-          minlength="2"
-          maxlength="60"
-        />
-      </div>
+            <button type="submit">Enviar información</button>
 
-      <!-- Campo 4: Fecha de visita -->
-      <div>
-        <label for="fecha">Fecha de visita</label>
-        <input
-          type="date"
-          id="fecha"
-          name="fecha"
-          required
-          min="2025-01-01"
-          max="2030-12-31"
-        />
-      </div>
-
-      <!-- Campo 5: Número de personas -->
-      <div>
-        <label for="personas">Número de personas</label>
-        <input
-          type="number"
-          id="personas"
-          name="personas"
-          placeholder="Ej: 4"
-          required
-          min="1"
-          max="50"
-        />
-      </div>
-
-      <!-- Campo 6: Teléfono -->
-      <div>
-        <label for="telefono">Teléfono de contacto</label>
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          placeholder="Ej: 3001234567"
-          required
-          pattern="[0-9]{7,10}"
-          minlength="7"
-          maxlength="10"
-        />
-      </div>
-
-      <!-- Campo 7: Mensaje (completo) -->
-      <div class="campo-completo">
-        <label for="mensaje">Mensaje o consulta</label>
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          placeholder="Escribe aquí tus preguntas o comentarios sobre tu visita..."
-          required
-          minlength="10"
-          maxlength="500"
-        ></textarea>
-      </div>
-
-      <button type="submit" class="btn-enviar">Enviar solicitud ✈️</button>
-    </form>
-  </section>
+        </form>
+    </section>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2025 Ocaña Turística – Alcaldía de Ocaña, Norte de Santander, Colombia</p>
-  <p style="margin-top:6px;">
-    Información: <a href="mailto:turismo@ocana-ns.gov.co">turismo@ocana-ns.gov.co</a> &nbsp;|&nbsp;
-    <a href="https://www.youtube.com/watch?v=Nl32PZM_dIo" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
-  </p>
+    <p>Andrea Ruedas - Turismo en Ocaña, Norte de Santander</p>
 </footer>
 
-<script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert('¡Gracias por tu interés en visitar Ocaña! Nos pondremos en contacto contigo pronto.');
-    e.target.reset();
-  }
-</script>
 </body>
 </html>
+```
+
+
+
+
+  
 
 
