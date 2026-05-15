@@ -3,6 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <title>Turismo en Ocaña, Norte de Santander</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #006400;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Menú de navegación */
+    nav {
+      background-color: #228B22;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Secciones */
+    section, aside, article {
+      padding: 20px;
+      margin: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Tabla de actividades */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #006400;
+      color: white;
+    }
+
+    /* Formulario */
+    form label {
+      display: inline-block;
+      width: 150px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="number"] {
+      padding: 5px;
+      width: 200px;
+    }
+
+    form input[type="submit"] {
+      background-color: #006400;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #228B22;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,7 +151,7 @@
     <!-- Sección actividades -->
     <section id="actividades">
       <h2>Actividades turísticas en Ocaña</h2>
-      <table border="1">
+      <table>
         <tr>
           <th>Actividad</th>
           <th>Duración</th>
@@ -112,5 +230,6 @@
 
 </body>
 </html>
+
 
 
